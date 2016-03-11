@@ -37,7 +37,7 @@ class VCalendar {
                     case 'BEGIN':
                         $vdata[$value] = (!isset($vdata[$value])) ? array() : $vdata[$value];
                         array_push($vdata[$value], $this->parse($arr));
-                        if ($value == "VCALENDAR") {
+                        if (trim($value) == "VCALENDAR") {
                             $isFinished = true;
                             $results = $vdata;
                         }
